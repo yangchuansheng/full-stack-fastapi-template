@@ -105,7 +105,7 @@ jobs:
         with:
           build-args: |
             ANKI_VERSION=${{ needs.get-latest-tag.outputs.tag }}
-          context: .
+          context: ./backend
           file: ./backend/Dockerfile
           push: true
           tags: ${{ steps.backend-meta.outputs.tags }}
@@ -127,7 +127,7 @@ jobs:
         with:
           build-args: |
             ANKI_VERSION=${{ needs.get-latest-tag.outputs.tag }}
-          context: .
+          context: ./frontend
           file: ./frontend/Dockerfile
           push: true
           tags: ${{ steps.frontend-meta.outputs.tags }}
