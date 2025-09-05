@@ -3,7 +3,7 @@ name: Build and push full-stack-fastapi Docker image
 on:
   workflow_dispatch:
   schedule:
-    - cron: "11 30 * * *"
+    - cron: "31 0 * * *"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
